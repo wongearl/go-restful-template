@@ -15,6 +15,8 @@ const (
 	ResourcePluralGlobalRoleBinding       = "globalrolebindings"
 	ClusterAdmin                          = "cluster-admin"
 	PlatformAdmin                         = "platform-admin"
+	PlatformSelfProvisioner               = "platform-self-provisioner"
+	PlatformRegular                       = "platform-regular"
 	ResourceKindClusterRole               = "ClusterRole"
 	ResourcesSingularGlobalRoleBinding    = "globalrolebinding"
 	ResourcesSingularWorkspaceRoleBinding = "workspacerolebinding"

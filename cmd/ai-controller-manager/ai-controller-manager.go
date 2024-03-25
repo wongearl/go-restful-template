@@ -52,7 +52,7 @@ func main() {
 		"Enable leader election for controller manager. "+
 			"Enabling this will ensure there is only one active controller manager.")
 	flag.BoolVar(&printVersion, "version", false, "Print version then exit.")
-	flag.StringVar(&features, "feature", "default,virtualmachine,application", "The feature names which will be started. Supported values: virtualmachine,application,devops,default")
+	flag.StringVar(&features, "feature", "default", "The feature names which will be started.default")
 	flag.StringVar(&featureGate, "feature-gate", "release", "The feature mature level, such as: alpha, beta, or release.")
 	opts := zap.Options{
 		Development: true,
