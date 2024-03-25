@@ -66,17 +66,15 @@ type AccessManagementInterface interface {
 }
 
 type amOperator struct {
-	globalRoleBindingGetter    resourcev1alpha3.Interface
-	workspaceRoleBindingGetter resourcev1alpha3.Interface
-	clusterRoleBindingGetter   resourcev1alpha3.Interface
-	roleBindingGetter          resourcev1alpha3.Interface
-	globalRoleGetter           resourcev1alpha3.Interface
-	workspaceRoleGetter        resourcev1alpha3.Interface
-	clusterRoleGetter          resourcev1alpha3.Interface
-	roleGetter                 resourcev1alpha3.Interface
-	namespaceLister            listersv1.NamespaceLister
-	aiclient                   ai.Interface
-	k8sclient                  kubernetes.Interface
+	globalRoleBindingGetter  resourcev1alpha3.Interface
+	clusterRoleBindingGetter resourcev1alpha3.Interface
+	roleBindingGetter        resourcev1alpha3.Interface
+	globalRoleGetter         resourcev1alpha3.Interface
+	clusterRoleGetter        resourcev1alpha3.Interface
+	roleGetter               resourcev1alpha3.Interface
+	namespaceLister          listersv1.NamespaceLister
+	aiclient                 ai.Interface
+	k8sclient                kubernetes.Interface
 }
 
 func NewReadOnlyOperator(factory informers.InformerFactory) AccessManagementInterface {

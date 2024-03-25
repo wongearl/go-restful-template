@@ -28,6 +28,7 @@ const (
 	PasswordAnnotationKey    = "ai.io/password"
 	RegisterAnnotationKey    = "ai.io/register"
 	RegisterSecretKey        = "ai@123456789"
+	WorkspaceLabelKey        = "ai.io/workspace"
 
 	DescriptionAnnotationkey = "ai.io/description"
 	NameAnnotationkey        = "ai.io/name"

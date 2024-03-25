@@ -36,7 +36,6 @@ type UserDetails struct {
 	Username       string            `json:"username"`
 	Email          string            `json:"email"`
 	GlobalRole     string            `json:"globalrole"`
-	WorkspaceRoles map[string]string `json:"workspaceroles"`
 	NamespaceRoles map[string]string `json:"namespaceroles"`
 }
 
@@ -79,7 +78,6 @@ func (h *iamHandler) DescribeUser(req *restful.Request, resp *restful.Response) 
 func (h *iamHandler) GetUserDetail(req *restful.Request, resp *restful.Response) {
 	var err error
 	userDetail := &UserDetails{
-		WorkspaceRoles: make(map[string]string, 0),
 		NamespaceRoles: make(map[string]string, 0),
 	}
 
