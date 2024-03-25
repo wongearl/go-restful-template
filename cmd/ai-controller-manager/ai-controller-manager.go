@@ -8,13 +8,18 @@ import (
 
 	// Import all Kubernetes client auth plugins (e.g. Azure, GCP, OIDC, etc.)
 	// to ensure that exec-entrypoint and run can make use of them.
+	corev1 "github.com/wongearl/go-restful-template/pkg/api/core.ai.io/v1"
+	iamv1 "github.com/wongearl/go-restful-template/pkg/api/iam.ai.io/v1"
+	"github.com/wongearl/go-restful-template/pkg/controllers/common"
+	"github.com/wongearl/go-restful-template/pkg/controllers/core"
+	loginrecordctrl "github.com/wongearl/go-restful-template/pkg/controllers/loginrecord"
+	userctrl "github.com/wongearl/go-restful-template/pkg/controllers/user"
 	"github.com/wongearl/go-restful-template/pkg/utils/sliceutil"
 	"github.com/wongearl/go-restful-template/pkg/version"
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
-	"kubevirt.io/client-go/kubecli"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
